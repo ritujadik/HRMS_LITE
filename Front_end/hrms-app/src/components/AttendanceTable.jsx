@@ -19,7 +19,7 @@ export default function AttendanceTable() {
       if (viewType === "all") {
         res = await API.get("/attendance/all");
       } else if (selectedEmployee) {
-        res = await API.get(`/attendance/${selectedEmployee}`);
+        res = await API.get(`/attendance/employee/${selectedEmployee}`);
       } else {
         res = { data: [] }; // no selection
       }
