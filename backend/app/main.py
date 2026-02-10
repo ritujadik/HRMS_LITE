@@ -24,3 +24,8 @@ app.add_middleware(
 
 app.include_router(employees.router)
 app.include_router(attendance.router)
+
+
+@app.get("/")
+def root():
+    return {"status": "API is running 🚀"}
